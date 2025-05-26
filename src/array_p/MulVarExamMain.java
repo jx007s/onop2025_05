@@ -41,8 +41,9 @@ public class MulVarExamMain {
 					//    국어  영어  수학   예체능
 		double [] rate = {0.1, 0.15, 0.2, 0.55};
 		
+		//                  res.length
 		for (int i = 0; i < res.length; i++) {
-			int [] me = res[i];
+			int [] me = res[i];   //각 사람의   int [] me = {0,0}
 			int [] meJum = jum[i];
 			//me[0] = 77;
 			//res[i][0] = 77;
