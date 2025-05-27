@@ -39,6 +39,9 @@ public class ClaExamMain {
 		ClaStud st1 = new ClaStud();
 		ClaStud st2 = new ClaStud();
 		
+		System.out.println(st1);
+		System.out.println(st2);
+		
 		//각 필드 대입
 		st1.ban = 3;
 		st1.no = 17;
@@ -51,6 +54,9 @@ public class ClaExamMain {
 		st2.pname = "삼효리";
 		st2.tel = "010-1111-1111";
 		st2.jum = new int[]{56,78,90};
+		
+		System.out.println(st1.jum);
+		System.out.println(st2.jum);
 		
 		//계산
 		st1.calc();
