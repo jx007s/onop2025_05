@@ -24,6 +24,23 @@ class SoccerPlayer{
 	
 }
 
+
+class HandPhone{
+	String name,camera = "일반카메라", earPhone="일반이어폰";
+	
+	void call() {
+		System.out.println(name+" "+earPhone+"으로 전화해요");
+	}
+	void photo() {
+		System.out.println(name+" "+camera+" 사진 찍어요");
+	}
+	void game() {
+		System.out.println(name+" 게임해요");
+	}
+}
+
+
+
 public class SoccerMain {
 
 	public static void main(String[] args) {
@@ -43,6 +60,23 @@ public class SoccerMain {
 		socP2.attack();
 		socP2.pass();
 		socP2.defense();
+		
+		
+		HandPhone hp1 = new HandPhone();
+		HandPhone hp2 = new HandPhone();
+		hp1.name = "갤럭시";
+		hp1.camera = "광학카메라";
+		hp2.name = "어른폰";
+		hp2.earPhone = "블루투스이어폰";
+		
+		System.out.println("hp1 "+hp1.name+","+hp1.camera+","+hp1.earPhone);
+		System.out.println("hp2 "+hp2.name+","+hp2.camera+","+hp2.earPhone);
+		
+		hp1.call();
+		hp1.photo();
+		
+		hp2.call();
+		hp2.game();
 	}
 
 }
