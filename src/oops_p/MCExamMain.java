@@ -30,9 +30,18 @@ class MCStud{
 class MCNumber{
 	int tot, max, min;
 	void input(int [] nums) {
-		sum(nums);
-		maxGo(nums);
-		minGo(nums);
+		
+		
+		if(nums.length==0) {
+			min = 0;
+			max = 0;
+			tot = 0;
+		}else {
+			sum(nums);
+			maxGo(nums);
+			minGo(nums);
+		}
+		
 	}
 	
 	void sum(int [] nums) {
@@ -42,6 +51,7 @@ class MCNumber{
 		}
 	}
 	void maxGo(int [] nums) {
+		
 		max = nums[0];
 		for (int i : nums) {
 			if(max<i) {
@@ -51,6 +61,7 @@ class MCNumber{
 	}
 	
 	void minGo(int [] nums) {
+		
 		min = nums[0];
 		for (int i : nums) {
 			if(min>i) {
@@ -72,9 +83,11 @@ public class MCExamMain {
 		st.input("정우성", 87,78,91);
 		st.ppp();
 		
+
 		MCNumber mcn = new MCNumber();
 		mcn.input(new int[] {
-				48, 56, 79, 12 ,45 ,9 ,7 ,81 ,32 ,100 ,54 ,56});
+			48, 56, 79, 12 ,45 ,9 ,7 ,81 ,32 ,100 ,54 ,56				
+		});
 		mcn.ppp();
 	}
 
