@@ -4,7 +4,13 @@ class RecurCall{
 	String pre="";
 	
 	int meth(int a) {
+		
+		a -= a % 2;
+		
 		int res = a;
+//		if(a%2!=0) {
+//			res = 0;
+//		}
 		String myPre=pre;
 		pre+="\t";
 		System.out.println(myPre+"시작 : "+a+","+res);
@@ -12,7 +18,7 @@ class RecurCall{
 		if(a>0) {//조건
 		
 			// 증감 : a-1
-			res += meth(a-1); //재귀호출
+			res += meth(a-2); //재귀호출
 		}
 		
 		
@@ -26,7 +32,7 @@ public class RecursiveCallMain {
 
 	public static void main(String[] args) {
 		RecurCall rc = new RecurCall();
-		int ret = rc.meth(100); //초기값 : 2
+		int ret = rc.meth(3); //초기값 : 2
 		System.out.println("ret : "+ret);
 
 	}
