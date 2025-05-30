@@ -64,6 +64,26 @@ public class ExtendsExamMain {
 		st2.ppp();
 		st3.ppp();
 		st4.ppp();
+		
+		
+//		ExGen [] studs1 = {
+//				new ExGen("정우성", 38,69,91),
+//				new ExArt("정좌성",36,57,71,92),
+//				new ExGen("정남성", 98,69,31),
+//				new ExArt("정중성",96,77,51,32)
+//		};
+		
+//		ExStud [] studs = {
+//				new ExGen("정우성", 38,69,91),
+//				new ExArt("정좌성",36,57,71,92),
+//				new ExGen("정남성", 98,69,31),
+//				new ExArt("정중성",96,77,51,32)
+//		};
+//		
+//		for (ExStud es : studs) {
+//			es.ppp();
+//		}
+		
 
 	}
 

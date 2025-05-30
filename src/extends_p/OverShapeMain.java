@@ -15,6 +15,7 @@ class OverRec{
 		area = w * h;
 		border = (w+h)*2;
 	}
+	
 	 void ppp() {
 		 calc();
 		 System.out.println(pname+"\t"+area+"\t"+border);
@@ -30,6 +31,8 @@ class OverTriAngle extends OverRec{
 		this.a = a;
 		pname = "직각삼각형";
 	}
+	
+	@Override  //오버라이드 되었다는 의미
 	void calc() {
 		area = w * h / 2;
 		border = w+h+a;
