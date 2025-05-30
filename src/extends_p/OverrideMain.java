@@ -1,6 +1,19 @@
 package extends_p;
 
-class OvPar{
+class Grand{
+	String g = "할아버지g";
+	void meth_g() {
+		System.out.println("할아버지 meth_g()");
+	}
+}
+
+class OvPar extends Grand{
+	//할아버지 hiding
+	String g = "부모g";
+	//할아버지 overriding
+	void meth_g() {
+		System.out.println("부모 meth_g()");
+	}
 	
 	OvPar() {
 		System.out.println("부모생성자-----------");
@@ -33,6 +46,8 @@ class OvPar{
 	void meth_2() {
 		System.out.println("부모 meth_2");
 	}
+	
+	//자식 클래스에서 overriding 불가
 	final void meth_3() {
 		System.out.println("final 부모 meth_3");
 	}
@@ -47,6 +62,8 @@ class OvChild extends OvPar{
 	//부모 final 멤버필드도 hiding 가능 - 기존 final 멤버필드와 다른 필드
 	String c = childsetC(); 
 	static String sa=childsetSA();
+	
+	
 	
 	String ca = setCA();
 	static String sca = setSCA();
@@ -97,6 +114,21 @@ class OvChild extends OvPar{
 	static void meth_s1() {
 		System.out.println("static 자식 meth_s1");
 	}
+	
+	// super : 부모접근자
+	// super  : 클래스 정의부에서 사용
+	//			인스턴스변수에서 super 접근불가
+	String pa = super.a;
+	
+	void meth_tot(){
+		System.out.println("자식 meth_tot 시작 >>>");
+		super.meth_1();
+		System.out.println("자식 meth_tot 끝 >>>");
+	}
+	
+	String gg = super.g;
+	//부모의 부모 멤버 접근불가
+	//String gg = super.super.g;
 }
 
 
@@ -121,9 +153,14 @@ public class OverrideMain {
 		OvPar.meth_s1();
 		OvChild.meth_s1();
 		cc.meth_c1();
-		
-		
-
+		System.out.println("super--------------");
+		System.out.println("pa:"+cc.pa);
+		//	인스턴스변수에서 super 접근불가
+		//System.out.println("super.a:"+cc.super.a);
+		cc.meth_tot();
+		System.out.println("g:"+cc.g);
+		cc.meth_g();
+		System.out.println("gg:"+cc.gg);
 	}
 
 }
