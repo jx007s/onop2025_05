@@ -1,6 +1,6 @@
 package extends_p;
 
-class DyStud{
+abstract class DyStud{
 	String pname, kind;
 	int [] jum;
 	int tot, avg;
@@ -19,7 +19,8 @@ class DyStud{
 		}
 	}
 	
-	void calc() {}
+	//void calc() {}
+	abstract void calc();
 	
 	void ppp() {
 		calc();
@@ -56,6 +57,17 @@ class DyArt extends DyStud{
 		}
 	}	
 }
+
+/*
+ 추상메소드 calc()를 재정의하지 않아 에러발생
+class DyEmployee extends DyStud{
+
+	DyEmployee(String pname, int kor, int eng) {
+		super("회사원", pname, new int[] {kor, eng});	
+	}
+	
+}
+*/
 
 
 public class DyExamMain {
