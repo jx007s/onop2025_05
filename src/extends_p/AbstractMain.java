@@ -45,19 +45,39 @@ public class AbstractMain {
 		
 		//인스턴스 생성시 추상메소드 재정의
 		AbsPar pp2 = new AbsPar() {
+			//hiding
+			int a = 1234;
+			
 			@Override
 			void meth_4() {
-				System.out.println("생성시 재정의 meth_4()");
+				//a : 1234
+				System.out.println("생성시 재정의 meth_4():"+a);
 			}
 			
+			//일반메소드 재정의
 			void meth_2() {
-				System.out.println("생성시 재정의 meth_2()");
+				System.out.println("생성시 재정의 meth_2() 시작----");
+				meth_5();
+				System.out.println("생성시 재정의 meth_2() 끝----");
+			}
+			
+			void meth_5() {
+				System.out.println("생성시 정의 meth_5()");
 			}
 		}; 
 		System.out.println(pp2.a);
 		pp2.meth_1();
 		pp2.meth_2();
 		pp2.meth_4();
+		//pp2.meth_5();
 	}
 
 }
+
+/// 부모 - 플레이어를 만드세요
+//플레이어에 반드시 있어야 하는 기능: 재생, 일시정지, 종료
+
+/// 자식 - MP3, 게임기, TV
+/// 부가적 기능은 알아서 넣으세요
+
+
