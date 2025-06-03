@@ -1,5 +1,12 @@
 package pac2;
+/*
+				클래스 내부	 같은패키지	 다른패키지 자손클래스	 	전체
+public 	 			O	 		O				O	 			O
+protected	 		O	 		O	 			O	 
+default(생략)	 	O	 		O	 	 
+private 	 		O	
 
+*/
 public class DDD {
 	public String a = "p2_DDD_public_a";
 	protected String b = "p2_DDD_protected_b";
