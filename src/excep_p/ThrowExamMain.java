@@ -5,6 +5,11 @@ import java.util.Scanner;
 public class ThrowExamMain {
 
 	public static void main(String[] args) {
+		
+		
+		String aaa = "qwer";
+		//  aaa == "qwer" 대신 aaa.equals("qwer")
+		System.out.println(  !aaa.equals("qwer")  );
 
 		Scanner sc = new Scanner(System.in);
 		int jum = 0;
