@@ -2,7 +2,20 @@ package excep_p;
 
 import java.util.Scanner;
 
-public class LogOneMain {
+
+class ReThrowsLogin{
+
+	//로그인 처리 만 있음 - try~catch 가 없다.
+	void login(){
+ 
+ 
+    }
+}
+ 
+
+
+// 예외처리만 있음 - 입력 및 검사 파트가 없음
+public class DecOneMain {
 
 	public static void main(String[] args) {
 
