@@ -32,7 +32,7 @@ class StaOuter{
 		//mySta1.m_s2();
 		System.out.println(InnSta.sc);
 		InnSta.m_s2();
-		System.out.println("[[[m_m1]]] 끝-----");
+		System.out.println("[[[m_sm1]]] 끝-----");
 	}
 	
 	
