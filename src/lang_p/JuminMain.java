@@ -36,7 +36,7 @@ public class JuminMain {
 			birth += jumin.substring(i*2,i*2+2)+title.charAt(i);
 		}
 		
-		System.out.println(birth); //
+		System.out.println(birth); //gigigi
 
 	}
 
