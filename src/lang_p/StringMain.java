@@ -1,5 +1,8 @@
 package lang_p;
 
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
 public class StringMain {
 
 	public static void main(String[] args) {
@@ -65,9 +68,44 @@ public class StringMain {
 		System.out.println("endsWith(\"3a4\") : "+f.endsWith("3a4"));
 		System.out.println("endsWith(\"12a3\") : "+f.endsWith("12a3"));
 		
+		String ttt = "정우성,감우성,행주산성_진주성,안시성.꼭시성";
+		String [] arr = ttt.split(",");
+		String [] arr1 = ttt.split(",",2);
 		
+		System.out.println(Arrays.toString(arr)+":"+arr.length);
+		System.out.println(Arrays.toString(arr1)+":"+arr1.length);
+		//문자열 => 문자열배열
+		String [] arr2 = ttt.split("[.]");
+		System.out.println(Arrays.toString(arr2)+":"+arr2.length);
 		
+		StringTokenizer stk = new StringTokenizer(ttt, ",.");
+		System.out.println(stk.hasMoreElements());//다음항목이 있는가
+		while(stk.hasMoreElements()) {
+			System.out.println(stk.nextElement());//항목 꺼내기
+		}
 		
+		String [] arr3 = {"차은우","자전거은우","비행기은우","바이크은우","킥보드은우"};
+		//문자열배열 => 문자열
+		String qqq = String.join("@", arr3);
+		System.out.println(qqq);
+		
+		//int [] arr4 = {111,22,333,444};
+		//String rrr = String.join("@", arr4);
+		//내사진.jpg
+        //숙제.java
+        //aasseedd.파일.최종.진짜.마지막.끝.수정.1.ppt
+		String [] ffs = "내사진.jpg,숙제.java,aasseedd.파일.최종.진짜.마지막.끝.수정.1.ppt".split(",");
+		
+		for (String ff : ffs) {
+			String [] bbs = ff.split("[.]");
+			System.out.println(Arrays.toString(bbs)+bbs.length);
+			System.out.println(bbs[bbs.length-1]);
+		}
+		
+		System.out.println(f.toUpperCase());
+		System.out.println(f.toLowerCase());
+		
+		//"aBcd Efg HIJk lMn opQR" -> Abcd Efg Hijk Lmn Opqr  로 변경해 주세요
 	}
 
 }

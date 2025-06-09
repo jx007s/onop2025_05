@@ -36,8 +36,17 @@ public class JuminMain {
 			birth += jumin.substring(i*2,i*2+2)+title.charAt(i);
 		}
 		
-		System.out.println(birth); //gigigi
-
+		System.out.println(birth); //
+		
+		
+		String swNo = "20020320a2lsh";
+		//             0123456789012
+		String [] buseo = {"인사", "총무", "두부","부부"};
+		String [] grade = {"사장","부장","과장","대리","사원"};
+		System.out.println("입사일 : "+swNo.substring(0,8));
+		System.out.println("부서 : "+buseo[swNo.charAt(8) -'a']);
+		System.out.println("직급 : "+grade[swNo.charAt(0) -'0']);
+		System.out.println("이름 : "+swNo.substring(10));
 	}
 
 }
