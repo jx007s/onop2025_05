@@ -106,6 +106,29 @@ public class StringMain {
 		System.out.println(f.toLowerCase());
 		
 		//"aBcd Efg HIJk lMn opQR" -> Abcd Efg Hijk Lmn Opqr  로 변경해 주세요
+		String ori = "aBcd Efg HIJk lMn opQR";
+		System.out.println(ori);
+		String ret = "";
+		for (String xx : ori.toLowerCase().split(" ")) {
+			//System.out.println(xx.substring(0,1).toUpperCase()+xx.substring(1));
+			ret += xx.substring(0,1).toUpperCase()+xx.substring(1)+" ";
+		}
+		System.out.println(ret.substring(0,ret.length()-1));
+		
+		ret = f.replace("a", "에이");
+		System.out.println(ret);
+		
+		ori = "     부트 캠프     ";
+		System.out.println(ori+":"+ori.length());
+		ret = ori.trim();
+		System.out.println(ret+":"+ret.length());
+		
+		aa = "장수풍뎅이";
+		bb = "사슴벌레";
+		cc = aa+bb;
+		System.out.println(cc);
+		ee = aa.concat(bb);
+		System.out.println(ee);
 	}
 
 }
