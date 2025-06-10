@@ -14,6 +14,9 @@ public class GBBMain {
 					{"패","승","비김"}	//2:보
 			//com	0:가위, 1:바위, 2:보
 		};
+		
+		// 선생님 봐줘요--> 이해 안감
+		
 		while(true) {
 			System.out.println("0:종료, 1:가위, 2:바위, 3:보");
 			System.out.print("입력 : ");
