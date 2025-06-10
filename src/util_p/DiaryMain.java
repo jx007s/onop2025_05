@@ -7,6 +7,9 @@ public class DiaryMain {
 	public static void main(String[] args) {
 		Date today = new Date();
 		System.out.println(today);
+		
+		int now = today.getDate();
+		//System.out.println(now);
 		/*
 		 이번달의 마지막 날
 		 지금이 토요일
@@ -28,7 +31,15 @@ public class DiaryMain {
 		for (int i = 1; i <=last; i++) {
 			today.setDate(i);
 			//System.out.println(today);
-			System.out.print(i+"\t");
+			
+			String pre=" ";
+			String sur=" ";
+			if(now==i) {
+				pre="[";
+				sur="]";
+			}
+			
+			System.out.print(pre+i+sur+"\t");
 			
 			if(today.getDay()==6) {  //토요일이면 줄바꾸기
 				System.out.println();
