@@ -1,6 +1,7 @@
 package util_p;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class CalendarMain {
 
@@ -35,6 +36,43 @@ public class CalendarMain {
 		
 	//// 출력 방식 2025 년 6 월 10일 (화요일) 15:17:56.789
 		calToPPP(today);
+		
+		System.out.println("set >>>>>>>>>>>>>");
+		today.set(2022,6-1,7,19,23,34);
+		calToPPP(today);
+		today.set(2022,20-1,37,49,103);
+		calToPPP(today);
+		today.set(2022,-100,-200);
+		calToPPP(today);
+		
+		today.set(Calendar.YEAR, 2002);
+		calToPPP(today);
+		today.set(Calendar.MONTH, 9-1);
+		calToPPP(today);
+		
+		today.add(Calendar.YEAR, 5);
+		calToPPP(today);
+		
+		Calendar now = Calendar.getInstance();
+		
+		System.out.println(now.before(today));
+		System.out.println(now.after(today));
+		
+		System.out.println(today.getTimeInMillis());
+		today.setTimeInMillis(0);
+		calToPPP(today);
+		
+		Date dd = new Date();
+		today.setTime(dd);		//   Calendar <--- Date
+		calToPPP(today);
+		today.set(2015, 5-1, 5);
+		dd = today.getTime();
+		System.out.println(dd);
+		calToPPP(today);
+		System.out.println(today.getActualMaximum(Calendar.DATE));
+		today.set(Calendar.MONTH, 2-1);
+		calToPPP(today);
+		System.out.println(today.getActualMaximum(Calendar.DATE));
 	}
 	
 	static void calToPPP(Calendar cc) {
@@ -50,5 +88,5 @@ public class CalendarMain {
 		System.out.println(ttt);
 	}
 	
-
+	//calendar를 이용하여 이번달 달력을 출력
 }
