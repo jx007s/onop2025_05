@@ -47,6 +47,28 @@ public class EnumCoffeeMain {
 		System.out.println(str+":"+tot);
 	}
 	
+	
+	void order(String ...ttt) {
+		
+		
+		int tot = 0;
+		String str = "";
+		
+		
+		
+		for (String ord : ttt) {
+			String [] arr = ord.split("_");
+			
+			
+			EnumCoffee coffee = EnumCoffee.valueOf(arr[0]);
+			int money = coffee.add(Integer.parseInt(arr[1]));
+			str += coffee.name+":"+arr[1]+"("+money+") , ";
+			tot += money;
+			
+		}
+		System.out.println(str+":"+tot);
+	}
+	
 	//정산
 		void adjustment() {
 			System.out.println("total----------------------");
