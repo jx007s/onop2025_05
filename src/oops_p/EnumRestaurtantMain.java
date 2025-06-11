@@ -31,10 +31,30 @@ public class EnumRestaurtantMain {
 		System.out.println(rt.name+" "+cnt+"개 주문이요 : "+rt.price*cnt);
 	}
 	
-	void order(String menus) {
+	void order(String menus) {  //String menus = "KC,MIL,DJ,DJ"
+		System.out.println("문자열 1개");
+		String [] arr = menus.split(","); 
+		//String [] arr = {"KC","MIL","DJ","DJ"};
+		order(arr) ;
+		/*
 		String ttt = "";
 		int tot = 0;
 		for (String mm: menus.split(",")) {
+			Resttt rt = Resttt.valueOf(mm);
+			rt.add(1);
+			ttt += rt.name+",";
+			tot += rt.price;
+		}
+		System.out.println(ttt+" : "+tot);
+		*/
+	}
+	
+	void order(String ...menus) {
+			//String [] menus ={ "KC","MIL","MIL","KC"};
+		System.out.println("가변형");
+		String ttt = "";
+		int tot = 0;
+		for (String mm: menus) {
 			Resttt rt = Resttt.valueOf(mm);
 			rt.add(1);
 			ttt += rt.name+",";
@@ -58,9 +78,9 @@ public class EnumRestaurtantMain {
 		order("KC", 2);
 		order("DJ", 1);
 		order("MIL", 3);
-		order("KC,MIL,DJ,DJ");
+		order("KC,MIL,DJ,DJ");  //"문자열 1개"
 		order("KC", 2);
-		
+		order("KC","MIL","MIL","KC");//가변변수형
 		
 		adjustment();
 	}

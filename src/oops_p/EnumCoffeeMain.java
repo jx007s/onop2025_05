@@ -26,9 +26,13 @@ enum EnumCoffee{
 public class EnumCoffeeMain {
 	
 	void order(String ttt) {
+		// String ttt = "AFRICANO_2,AMERICANO_1,ASIANO_2";
 		
 		int tot = 0;
 		String str = "";
+		
+		//{"AFRICANO_2","AMERICANO_1","ASIANO_2"}  
+		
 		for (String ord : ttt.split(",")) {
 			String [] arr = ord.split("_");
 			//System.out.println(arr[0]);
@@ -59,6 +63,8 @@ public class EnumCoffeeMain {
 		order("AMERICANO_2,ASIANO_3,AFRICANO_1");
 		order("AFRICANO_2,ASIANO_1");
 		order("AFRICANO_2,AMERICANO_1,ASIANO_2");
+		order("AFRICANO_3","AMERICANO_4","ASIANO_2");
+		order("AMERICANO_2","ASIANO_1");
 		adjustment();
 	}
 
