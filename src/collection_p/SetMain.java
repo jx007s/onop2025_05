@@ -1,7 +1,9 @@
 package collection_p;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class SetMain {
@@ -61,6 +63,37 @@ public class SetMain {
 		bb = ss1.remove(100);
 		System.out.println("remove(100) : "+ss1);
 		System.out.println("bb : "+bb);
+		System.out.println("ss7 : "+ss7);
+		ss1.removeAll(ss7);
+		System.out.println("removeAll(ss7) : "+ss1);
+		Set ss8 = new HashSet();
+		ss8.add(100);
+		ss8.add(11);
+		ss8.add(2000);
+		ss8.add('a');
+		System.out.println("ss8 : "+ss8);
+		ss1.retainAll(ss8);
+		System.out.println("retainAll(ss8) : "+ss1);
+		
+		Object [] data2 = ss1.toArray();
+		System.out.println("toArray() : "+data2+Arrays.toString(data2));
+		ArrayList arr3 = new ArrayList(ss1);
+		System.out.println("ArrayList(ss1) : "+arr3);
+		
+		System.out.println("기본 for-------");
+//		for (int i = 0; i < ss1.size(); i++) {
+//			System.out.println(ss1.get(i));
+//		}
+		System.out.println("향상된 for-------");
+		for (Object oo : ss1) {
+			System.out.println(oo);
+		}
+		
+		System.out.println("Iterator-------");
+		Iterator it = ss1.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
 	}
 
 }
