@@ -21,6 +21,21 @@ public class LottoMain {
 		
 		System.out.println("lotto1 : "+lotto1);
 		System.out.println("lotto2 : "+lotto2);
+		
+		HashSet bingo = new HashSet();
+		
+		while(bingo.size()!=25) {
+			bingo.add((int)(Math.random()*100)+1);
+		}
+		int cnt = 0;
+		for (Object oo : bingo) {
+			System.out.print(oo+"\t");
+			
+			if(++cnt%5==0) {
+				System.out.println();
+			}
+		}
+		
 	}
 
 }
