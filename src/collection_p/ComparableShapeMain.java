@@ -1,7 +1,7 @@
 package collection_p;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.TreeSet;
 
 class ComparableShape implements Comparable{
@@ -57,7 +57,7 @@ class ComparableShape implements Comparable{
 	}
 	
 }
-
+// P@$$W0rd
 public class ComparableShapeMain {
 
 	public static void main(String[] args) {
