@@ -17,7 +17,7 @@ class ComStud{
 
 	@Override
 	public String toString() {
-		return kind + "\t" + ban + "\t" + name + "\t" + jum;
+		return ban + "\t" +kind + "\t" + jum+ "\t" +  name ;
 	}
 }
 
