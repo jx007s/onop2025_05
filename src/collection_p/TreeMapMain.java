@@ -31,16 +31,22 @@ class TmCom4 implements Comparator{
 
 	@Override
 	public int compare(Object o1, Object o2) {
-		// 1의 자리 기준 정렬
+		// 1  의 자리 오름차순
+		// 10 의 자리 내림차순
 		int me = (int)o1;
 		int you = (int)o2;
 		
 		int meOne = me%10;
 		int youOne = you%10;
 		
+		int meTen = me/10;
+		int youTen = you/10;
+		// 1의 자리
 		int res = meOne - youOne;
+		
+		//10 의 자리
 		if(res==0) {
-			res = 1;
+			res = youTen - meTen;
 		}
 		return res;
 	}
@@ -84,6 +90,18 @@ public class TreeMapMain {
 		System.out.println("tm2"+tm2);
 		System.out.println("tm3"+tm3);
 		System.out.println("tm4"+tm4);
+		
+		
+		/*
+		 * 반 >  성별 > 점수, 이름
+		 * 
+		 * TreeMap
+		 *   k,  v
+		 *   반  TreeMap
+		 *        k,  v
+		 *       성별, TreeSet(점수 > 이름)
+		 *             학생
+		 * */
 
 	}
 
