@@ -2,6 +2,7 @@ package collection_p;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeSet;
 
 public class WordCntMain {
 
@@ -34,7 +35,7 @@ public class WordCntMain {
 		///
 		HashMap mm = new HashMap();
 		///
-		for (String ttt: news.split(" ")) {
+		for (String ttt: news.replace("(", " ").replace(")", " ").replace("'", " ").replace(",", " ").replace(".", " ").replace("  ", " ").split(" ")) {
 			int cnt = 1;
 			if(mm.containsKey(ttt)) {
 				cnt += (int)mm.get(ttt);
@@ -43,12 +44,18 @@ public class WordCntMain {
 			//System.out.println(ttt+":"+mm);
 		}
 		
-		
+		/*
 		for (Object oo : mm.entrySet()) {
 			Map.Entry me = (Map.Entry)oo;
 			
 			System.out.println(me.getKey()+" : "+me.getValue());
+		}*/
+		
+		for (Object k : new TreeSet(mm.keySet())) {
+			
+			System.out.println(k+"\t"+ "*".repeat((int)mm.get(k)));
 		}
+		
 
 	}
 
