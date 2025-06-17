@@ -119,21 +119,43 @@ public class GenericArrayListMain {
 //		methHH(ehArr);
 //		methHH(tvArr);
 		
-		
+		// 자신 + 자식		
 //		methHHEx(objArr);
 //		methHHEx(ppArr);
-		methHHEx(hhArr);
+		methHHEx(hhArr);	//자신 가능
 //		methHHEx(ffArr);
 //		methHHEx(shArr);
-		methHHEx(ehArr);
+		methHHEx(ehArr);	//자신 + <? extends 자신> 가능
 //		methHHEx(tvArr);
+		
+		// 자신 + 자식
+//		methPPEx(objArr);
+		methPPEx(ppArr);    //자신
+		methPPEx(hhArr);	// 자식
+		methPPEx(ffArr);	// 자식
+//		methPPEx(shArr);
+		methPPEx(ehArr);	// ? extends 자신
+//		methPPEx(tvArr);
+		
+		
+	//	methHHSuper(objArr);
+		methHHSuper(ppArr);  // 자신 + 부모 가능
+		methHHSuper(hhArr);  // 자신 + 부모 가능
+	//	methHHSuper(ffArr);
+		methHHSuper(shArr);  // ? super 자신 가능
+	//	methHHSuper(ehArr);
+	//	methHHSuper(tvArr);
 		
 	}	
 	
 	static void methObj(ArrayList arr) { for (Object obj : arr) {	}}
 	static void methPP(ArrayList<Phone> arr) { for (Phone obj : arr) {	}}
 	static void methHH(ArrayList<HandPhone> arr) { for (HandPhone obj : arr) {	}}
+	
+	//? extends 부모   ::> 자신과 자식 가능
 	static void methHHEx(ArrayList<? extends HandPhone> arr) { for (HandPhone obj : arr) {	}}
+	static void methPPEx(ArrayList<? extends Phone> arr) { for (Phone obj : arr) {	}}
+	
 	static void methHHSuper(ArrayList<? super HandPhone> arr) { 
 		//for (HandPhone obj : arr) {	}  에러발생
 		for (Object obj : arr) {	}  
