@@ -53,6 +53,7 @@ public class DecimalFormatMain {
 			
 			for (double d : ddArr) {
 				System.out.println("   "+d+" : "+df.format(d));
+				
 			}
 		}
 		/*
@@ -71,6 +72,14 @@ public class DecimalFormatMain {
 		 
 		 * */
 		
+		int [] arr = {67,78,89,98,76,54,78,77,90,56};
+		
+		df = new DecimalFormat("▲0;▼");
+		
+		for (int i : arr) {
+			
+			System.out.println(i+" : "+df.format(i-70).charAt(0));
+		}
 		
 	}
 
