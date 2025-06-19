@@ -67,7 +67,7 @@ public class FileShapeMain {
 			
 			fr.close();
 			
-			//System.out.println(ttt);
+			//System.out.println(ttt); 뭐지 뭐야????
 			String res = "";
 			for (String str : ttt.split("\n")) {
 				res += new FileShape(str).toString()+"\n";
