@@ -67,7 +67,7 @@ public class FileShapeMain {
 			
 			fr.close();
 			
-			//System.out.println(ttt); 뭐지 뭐야????
+			//System.out.println(ttt); 또 변경 
 			String res = "";
 			for (String str : ttt.split("\n")) {
 				res += new FileShape(str).toString()+"\n";
