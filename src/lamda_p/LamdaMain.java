@@ -19,6 +19,11 @@ interface BBB{
 	int meth(int a, int b);
 }
 
+interface CCC{
+	int meth_1(int a, int b);
+	int meth_2(int a, int b);
+	
+}
 
 public class LamdaMain {
 
@@ -90,7 +95,40 @@ public class LamdaMain {
 		
 		rr = b1.meth(10, 20);
 		System.out.println(rr);
+		
+		CCC c1 = new CCC() {
+			
+			@Override
+			public int meth_2(int a, int b) {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+			
+			@Override
+			public int meth_1(int a, int b) {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+		};
+		
+		// 추상메소드 2개인 경우 람다식 불가
+		//CCC c2 = (a,b)->{System.out.println("람다식 재정의:"+a+","+b);};
 
 	}
 
 }
+/*
+ 정수3개를 매개변수로 받고 정수1개를 리턴하는 람다식 가능한 인터페이스를 구현하세요
+ 
+ 계산식은 3개를 구현하세요
+ 1. 3개의 합 리턴
+ 2. 3개중 가장 큰수를 리턴
+ 3. 첫번째 두번째 매개변수를 곱하고 3번째 매개변수로 뺀 수 리턴
+ * */
+
+
+
+
+
+
+
