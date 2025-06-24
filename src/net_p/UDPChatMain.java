@@ -6,13 +6,20 @@ import java.net.InetAddress;
 import java.util.Scanner;
 
 class UDPChatSender extends Thread{
+	
+	String ip;
+	
+	UDPChatSender(String ip) {
+		this.ip = ip;
+	}
+
 	@Override
 	public void run() {
 		
 		Scanner sc = new Scanner(System.in);
 		try {
 			
-			InetAddress addr = InetAddress.getByName("192.168.0.86");
+			InetAddress addr = InetAddress.getByName(ip);
 			
 			
 			while(true) {
@@ -70,7 +77,7 @@ public class UDPChatMain {
 
 	public static void main(String[] args) {
 
-		new UDPChatSender().start();
+		new UDPChatSender("192.168.0.255").start();
 		new UDPChatReceiver().start();
 	}
 
